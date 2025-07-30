@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suleiman – Linux DevOps Engineer</title>
+  <link rel="icon" href="./favicon.ico" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+  <!-- Tailwind Dark Mode Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+
+  <!-- Theme Toggle Logic -->
+  <script>
+    const isDark = localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (isDark) document.documentElement.classList.add('dark');
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-gray-800 dark:text-gray-100">Making Ops Invisible</h1>
+      <nav class="space-x-4 text-sm hidden md:flex">
+        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+        <a href="#portfolio" class="hover:text-blue-600 dark:hover:text-blue-400">Portfolio</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+      </nav>
+      <button onclick="toggleTheme()" class="ml-4 px-3 py-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 rounded text-sm">
+        Toggle Theme
+      </button>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="pt-32 pb-20 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:justify-center md:space-x-10 text-center md:text-left">
+      <div class="w-40 h-40 md:w-52 md:h-52 mb-6 md:mb-0">
+        <img src="./images/me.png" alt="Your Photo"
+          class="rounded-full object-cover shadow-lg ring-4 ring-blue-500 dark:ring-blue-400 w-full h-full" />
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-2">Suleiman Kirimov</h2>
+        <p class="text-blue-600 dark:text-blue-400 text-lg font-semibold mb-4">Linux DevOps Engineer</p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl mb-6">
+            Need someone who can spin up secure Linux servers, automate your deployments, and troubleshoot issues before they hit production?
+            That’s exactly what I do — with clean code, solid infrastructure, and fast communication.
+        </p>
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 dark:hover:bg-blue-500 text-white px-5 py-2 rounded transition">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-8">Tech Stack</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <span class="bg-gray-100 dark:bg-gray-800 py-2 px-3 rounded">Linux (Ubuntu, Debian)</span>
+        <span class="bg-gray-100 dark:bg-gray-800 py-2 px-3 rounded">Docker & Compose</span>
+        <span class="bg-gray-100 dark:bg-gray-800 py-2 px-3 rounded">NGINX & SSL</span>
+        <span class="bg-gray-100 dark:bg-gray-800 py-2 px-3 rounded">CI/CD (GitHub Actions)</span>
+        <span class="bg-gray-100 dark:bg-gray-800 py-2 px-3 rounded">Bash & Python</span>
+        <span class="bg-gray-100 dark:bg-gray-800 py-2 px-3 rounded">Server Hardening</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-8">Portfolio</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/nginx/009639" alt="NGINX logo" class="w-8 h-8 mb-3" />
+          <h4 class="text-lg font-semibold mb-2">NGINX Reverse Proxy Setup</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            Configured a secure NGINX reverse proxy with SSL termination and automatic renewal via Certbot.
+          </p>
+          <a href="#" class="text-blue-600 hover:underline text-sm">View Project</a>
+        </div>
+        <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/wireguard/88171A" alt="WireGuard logo" class="w-8 h-8 mb-3" />
+          <h4 class="text-lg font-semibold mb-2">WireGuard VPN Setup</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            Deployed a lightweight and secure WireGuard VPN server on Ubuntu with automatic peer configuration and firewall rules.
+          </p>
+          <a href="#" class="text-blue-600 hover:underline text-sm">View Project</a>
+        </div>
+        <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions logo" class="w-8 h-8 mb-3" />
+          <h4 class="text-lg font-semibold mb-2">CI/CD with GitHub Actions</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            Built a CI/CD pipeline for Dockerized apps using GitHub Actions: tests, image build, and remote deployment over SSH.
+          </p>
+          <a href="#" class="text-blue-600 hover:underline text-sm">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-2xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-6">Contact Me</h3>
+      <p class="text-gray-600 dark:text-gray-400 mb-4">Feel free to reach out via any platform below.</p>
+      <ul class="space-y-2">
+        <li>Email: <a href="mailto:kirimov.suleiman@gmail.com" class="text-blue-600 hover:underline">kirimov.suleiman@gmail.com</a></li>
+        <li>Telegram: <a href="https://t.me/suleimank" class="text-blue-600 hover:underline">@suleimank</a></li>
+        <li>GitHub: <a href="https://github.com/Suleiman0212" class="text-blue-600 hover:underline">Suleiman0212</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 dark:bg-gray-800 text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+    © 2025 Suleiman – All rights reserved
+  </footer>
+
+</body>
+</html>
