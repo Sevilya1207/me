@@ -97,30 +97,71 @@
     <div class="max-w-6xl mx-auto text-center">
       <h3 class="text-2xl font-bold mb-8">Portfolio</h3>
       <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- QuoteApp -->
+        <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
+          <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" class="w-8 h-8 mb-3" />
+          <h4 class="text-lg font-semibold mb-2">QuoteApp – Dockerized Web App</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            A full-stack demo app with <strong>frontend + backend</strong> wrapped in <strong>Docker & Docker Compose</strong>.  
+            Showcases containerized deployments with a lightweight <strong>SQLite DB</strong> and a TailwindCSS UI.  
+            Perfect as a quick deployable starter project.
+          </p>
+          <a href="https://github.com/Sevilya1207/quote-app" class="text-blue-600 hover:underline text-sm">View Project</a>
+        </div>
+
+        <!-- Nginx SSL Setup -->
         <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
           <img src="https://cdn.simpleicons.org/nginx/009639" alt="NGINX logo" class="w-8 h-8 mb-3" />
-          <h4 class="text-lg font-semibold mb-2">NGINX Reverse Proxy Setup</h4>
+          <h4 class="text-lg font-semibold mb-2">NGINX + SSL (Dockerized)</h4>
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-            Configured a secure NGINX reverse proxy with SSL termination and automatic renewal via Certbot.
+            A production-ready <strong>Nginx reverse proxy</strong> with <strong>Let's Encrypt SSL</strong> packaged in Docker.  
+            Includes auto-renewal via <code>cron</code>, ready-to-use configs, and helper scripts for one-command setup.  
+            Secure, automated, and easy to deploy.
           </p>
-          <a href="#" class="text-blue-600 hover:underline text-sm">View Project</a>
+          <a href="https://github.com/Sevilya1207/nginx-ssl-setup" class="text-blue-600 hover:underline text-sm">View Project</a>
         </div>
+
+        <!-- Linux Server Setup Script -->
         <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
-          <img src="https://cdn.simpleicons.org/wireguard/88171A" alt="WireGuard logo" class="w-8 h-8 mb-3" />
-          <h4 class="text-lg font-semibold mb-2">WireGuard VPN Setup</h4>
+          <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux logo" class="w-8 h-8 mb-3" />
+          <h4 class="text-lg font-semibold mb-2">Linux Server Setup Script</h4>
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-            Deployed a lightweight and secure WireGuard VPN server on Ubuntu with automatic peer configuration and firewall rules.
+            Automated Linux server provisioning script: <strong>User Management</strong>,  
+            <strong>SSH setup</strong> with key generation, <strong>UFW firewall</strong> rules,  
+            <strong>Fail2Ban</strong> protection, and an <strong>interactive CLI menu</strong> for easy administration.  
+            Ideal for secure server bootstrapping.
           </p>
-          <a href="#" class="text-blue-600 hover:underline text-sm">View Project</a>
+          <a href="https://github.com/Sevilya1207/linux-server-setup" class="text-blue-600 hover:underline text-sm">View Project</a>
         </div>
+
+        <!-- DevOps Portfolio Website -->
         <div class="bg-white dark:bg-gray-900 shadow rounded p-4 flex flex-col items-center">
-          <img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions logo" class="w-8 h-8 mb-3" />
-          <h4 class="text-lg font-semibold mb-2">CI/CD with GitHub Actions</h4>
+          <div class="flex space-x-2 mb-3">
+            <img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions logo" class="w-8 h-8" />
+            <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" class="w-8 h-8" />
+          </div>
+          <h4 class="text-lg font-semibold mb-2">Personal Portfolio Website</h4>
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-            Built a CI/CD pipeline for Dockerized apps using GitHub Actions: tests, image build, and remote deployment over SSH.
+            My personal <strong>DevOps portfolio website</strong>, hosted on <strong>GitHub Pages</strong> with  
+            a <strong>CI/CD pipeline</strong> powered by GitHub Actions.  
+            Features Docker support for local dev and a custom domain for production.
           </p>
-          <a href="#" class="text-blue-600 hover:underline text-sm">View Project</a>
+          <a href="https://github.com/Sevilya1207/sevilya1207.github.io" target="_blank" class="text-blue-600 hover:underline text-sm">View Project</a>
+          <a href="https://me.zeroserv.top" target="_blank" class="text-blue-600 hover:underline text-sm">Live Demo</a>
         </div>
+
+        <!-- More Projects (grid-aligned) -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow rounded p-6 flex flex-col items-center justify-center">
+          <h4 class="text-lg font-semibold mb-2">...and more!</h4>
+          <p class="text-sm opacity-90 mb-3">
+            These are just a few highlights. You can view other projects and contributions on my GitHub.
+          </p>
+          <a href="https://github.com/Sevilya1207" target="_blank" class="bg-white text-blue-600 px-4 py-2 rounded font-medium hover:bg-gray-100 transition">
+            View on GitHub
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
